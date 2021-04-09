@@ -7,15 +7,17 @@ import com.yy.多态例子.Teacher;
 public class main {
     public static void main(String[] args) {
 
-        System.out.println("main");
+        Person ob = new Student();
 
-        Student ob = new Student();
+        ob.carrer();
+        ob.eat();
 
-        System.out.println(ob instanceof Object);
-        System.out.println(ob instanceof Person);
-        System.out.println(ob instanceof Student);
-//        System.out.println(ob instanceof Teacher);
-//        System.out.println(ob instanceof String);
+        Student ob2 = (Student) ob;
+        ob2.homework();
+
+        ob.play();
+        ob2.play();
+
 
     }
 }
