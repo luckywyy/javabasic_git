@@ -5,6 +5,12 @@ import top.yy.继承Thread类.Count01;
 import java.sql.Timestamp;
 import java.util.Vector;
 
+/**
+ * 实现runnable接口
+ * 需要把实现类实例放入Thread类构造器中，最好再给个名称
+ * 还是通过start方法调用
+ * 在Runnable接口中 仍把需要运行的方法体放入了run方法中
+ */
 public class Demo01 implements Runnable{
     public void run() {
 
