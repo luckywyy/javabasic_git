@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Javadsal" target="1.5" />
-      <module name="Threadbasic" target="1.5" />
+      <module name="Threadbasic" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
