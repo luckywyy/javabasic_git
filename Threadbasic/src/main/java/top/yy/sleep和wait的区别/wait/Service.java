@@ -25,8 +25,12 @@ public class Service {
             System.out.println("结束时间 "+System.currentTimeMillis());
             System.out.println(new SimpleDateFormat("yy:MM:dd HH:mm:ss.SSS").format(new Date()));
 
-//            这里也需要唤醒
-            this.notifyAll();
+//            进行等待
+            try {
+                this.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
