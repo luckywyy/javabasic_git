@@ -11,30 +11,34 @@ public class VectorDemo {
 
 
         Vector<String> strings = new Vector<>();
-        boolean empty1 = strings.isEmpty();
-        System.out.println(empty1);
+//        boolean empty1 = strings.isEmpty();
+//        System.out.println(empty1);
         strings.add("a");
         strings.add("b");
         strings.add("c");
         strings.add("d");
         strings.add("e");
-        System.out.println(strings.toString());
-
-//        for (String string : strings) {
-//            System.out.println(string);
+//        System.out.println(strings.toString());
+//
+////        for (String string : strings) {
+////            System.out.println(string);
+////        }
+//
+//        strings.addAll(strings);
+//        System.out.println(strings);
+//
+//        boolean empty = strings.isEmpty();
+//        System.out.println(empty);
+//
+//        Iterator<String> iterator = strings.iterator();
+//        while (iterator.hasNext()) {
+//            System.out.println(iterator.next());
 //        }
 
-        strings.addAll(strings);
-        System.out.println(strings);
-
-        boolean empty = strings.isEmpty();
-        System.out.println(empty);
-
-        Iterator<String> iterator = strings.iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
-
+//        可以用于函数式编程
+        strings.forEach(s -> {
+            System.out.println(s);
+        });
 
     }
 }
