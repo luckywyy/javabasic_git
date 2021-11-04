@@ -7,11 +7,8 @@ public class Demo01 {
     public static void main(String[] args) {
 
         Vector<String> vector = new Vector<String>();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 50; i++) {
             vector.add("Demo01 main" + "----" + Integer.valueOf(i).toString());
-        }
-        for (String s : vector) {
-            System.out.println(s);
         }
 
         Count01 count01 = new Count01();
@@ -19,5 +16,13 @@ public class Demo01 {
 
         Count02 count02 = new Count02();
         count02.start();
+        for (String s : vector) {
+            System.out.println(s);
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

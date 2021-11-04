@@ -7,11 +7,16 @@ import java.util.concurrent.locks.Lock;
 public class Count01 extends Thread{
     public void count() {
         Vector<String> vector = new Vector<String>();
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 50; i++) {
             vector.add(Count01.class.getName() + "----" + Integer.valueOf(i).toString());
         }
         for (String s : vector) {
             System.out.println(s);
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }
