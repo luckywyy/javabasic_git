@@ -55,6 +55,7 @@ public class Demo01 {
                     lock.lock();
                     gifts++;
                     System.out.println("生产了 =======> " + gifts);
+
                     try {
                         Thread.sleep(10);
                     } catch (InterruptedException e) {
