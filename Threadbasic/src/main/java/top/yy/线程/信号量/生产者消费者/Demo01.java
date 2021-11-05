@@ -38,8 +38,8 @@ public class Demo01 {
          */
 
 //        线程优先级有10个等级，分别用整数1-10表示。其中1位最低优先级，10为最高优先级，5为默认值。
-        thread.setPriority(10);
-        thread1.setPriority(1);
+        thread.setPriority(Thread.MAX_PRIORITY);
+        thread1.setPriority(Thread.MIN_PRIORITY);
 
     }
 
