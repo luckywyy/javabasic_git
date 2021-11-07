@@ -18,6 +18,10 @@ public class VectorDemo {
         strings.add("c");
         strings.add("d");
         strings.add("e");
+
+        System.out.println(strings.size());
+        System.out.println(strings.capacity());
+
 //        System.out.println(strings.toString());
 //
 ////        for (String string : strings) {
@@ -35,10 +39,10 @@ public class VectorDemo {
 //            System.out.println(iterator.next());
 //        }
 
-//        可以用于函数式编程
-        strings.forEach(s -> {
-            System.out.println(s);
-        });
+////        可以用于函数式编程
+//        strings.forEach(s -> {
+//            System.out.println(s);
+//        });
 
     }
 }
