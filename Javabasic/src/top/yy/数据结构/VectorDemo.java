@@ -22,6 +22,12 @@ public class VectorDemo {
         System.out.println(strings.size());
         System.out.println(strings.capacity());
 
+//        out:
+//        5
+//        10
+//
+//        Process finished with exit code 0
+
 //        System.out.println(strings.toString());
 //
 ////        for (String string : strings) {
