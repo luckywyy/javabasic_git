@@ -2,9 +2,7 @@
 
 HashSet是哈希表数据结构
 
-只是在Java中的，加入一个不可重复功能
-
-即以equals对比加入元素在计算同一位置元素的两个hashcode是否一致
+以equals对比加入元素在计算同一位置元素的两个hashcode是否一致
 
 一致返回false不添加
 
