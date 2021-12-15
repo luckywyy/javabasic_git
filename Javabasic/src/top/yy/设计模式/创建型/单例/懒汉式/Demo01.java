@@ -7,5 +7,14 @@ package top.yy.设计模式.创建型.单例.懒汉式;
  * 但是并没有执行到下面创建对象的语句
  */
 public class Demo01 {
-    
+    private Demo01 () {}
+
+    private static Demo01 instance;
+
+    public static Demo01 getInstance() {
+        if (instance == null) {
+            instance = new Demo01();
+        }
+        return instance;
+    }
 }
