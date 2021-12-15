@@ -9,7 +9,8 @@ package top.yy.设计模式.创建型.单例.双重检查机制;
  */
 public class Demo01 {
     private Demo01() {}
-    private static Demo01 instance;
+    // volatile 关键字 保证指令有序，这在JVM中有空指针问题
+    private static volatile Demo01 instance;
 
     public static Demo01 getInstance() {
 //        第一次判断
