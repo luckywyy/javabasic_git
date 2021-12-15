@@ -1,4 +1,4 @@
-package top.yy.设计模式.创建型.解决序列化反射等破环单例模式方案;
+package top.yy.设计模式.创建型.序列化破环单例解决方案;
 
 /**
  * @program: javabasic_git
