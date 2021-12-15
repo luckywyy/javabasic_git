@@ -11,7 +11,7 @@ package top.yy.设计模式.创建型.单例.懒汉静态内部类;
 public class Demo01 {
     private Demo01 instance;
     private static class Demo01Holder {
-        private static final  Demo01 INSTANCE = new Demo01();
+        private static final Demo01 INSTANCE = new Demo01();
     }
     public static Demo01 getInstance() {
         return Demo01Holder.INSTANCE;
