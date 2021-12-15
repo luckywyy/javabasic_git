@@ -1,4 +1,4 @@
-package top.yy.设计模式.创建型.序列化破环单例解决方案;
+package top.yy.设计模式.创建型.单例.序列化破环单例解决方案;
 
 /**
  * @program: javabasic_git
