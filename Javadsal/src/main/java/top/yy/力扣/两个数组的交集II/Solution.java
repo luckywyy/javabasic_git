@@ -34,5 +34,8 @@ class Solution {
 
     public static void main(String[] args) {
         int[] res = new Solution().intersect(new int[]{4,9,5}, new int[]{9,4,9,8,4});
+        for (int re : res) {
+            System.out.println(re);
+        }
     }
 }
