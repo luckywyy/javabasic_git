@@ -9,13 +9,16 @@ package top.yy.力扣.买卖股票的最佳时机;
 public class Solution2 {
     public int maxProfit(int[] prices) {
 
-        int max_ = Integer.MIN_VALUE;
-
-        if (max_ < 0) {
-            max_ = 0;
+        int minprice = Integer.MAX_VALUE;
+        int maxprofit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < minprice) {
+                minprice = prices[i];
+            } else if (prices[i] - minprice > maxprofit) {
+                maxprofit = prices[i] - minprice;
+            }
         }
-
-        return max_;
+        return maxprofit;
     }
 
     public static void main(String[] args) {
