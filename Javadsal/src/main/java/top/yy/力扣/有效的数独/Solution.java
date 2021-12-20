@@ -20,7 +20,7 @@ public class Solution {
     public static void main(String[] args) throws FileNotFoundException {
         FileInputStream fis = new FileInputStream(new File("./数独矩阵.txt"));
 
-        
+
 
     }
 }
