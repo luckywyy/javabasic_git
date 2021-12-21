@@ -1,7 +1,7 @@
-package top.yy.二叉树的遍历.前序遍历;
+package top.yy.力扣.二叉树的遍历.前序遍历;
 
 /**
- * @program: javabasic_git-top.yy.二叉树的遍历.前序遍历
+ * @program: javabasic_git-top.yy.力扣.二叉树的遍历.前序遍历
  * @description: 根据LDR三个节点 二叉树的遍历有六种
  * 一般来说 分为DLR LDR LRD 三种前序遍历 中序遍历和后序遍历
  * @author:
