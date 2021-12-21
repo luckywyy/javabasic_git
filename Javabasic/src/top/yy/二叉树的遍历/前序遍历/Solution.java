@@ -8,6 +8,7 @@ package top.yy.二叉树的遍历.前序遍历;
  * @create: 2021-12-21 10:20
  **/
 
+import javax.transaction.TransactionRequiredException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,12 +30,39 @@ import java.util.List;
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
 
+        ArrayList<Integer> integers = new ArrayList<>();
 
-        return new ArrayList<Integer>();
+        System.out.println(root.val);
+//        if (root == null) {
+//            return null;
+//        }
+//        integers.add(Integer.valueOf(root.val));
+        DLR(root, integers);
+
+        return integers;
+    }
+
+    public void DLR(TreeNode node, ArrayList list) {
+        if (node != null) {
+            list.add(Integer.valueOf(node.val));
+            DLR(node.left, list);
+            DLR(node.right, list);
+        }
+
+        return;
+
     }
 
     public static void main(String[] args) {
 //        构建二叉树
+//        root = [1,null,2,3]
+
+//        TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3, null, null), null));
+        TreeNode root = new TreeNode();
+
+        for (Integer integer : new Solution().preorderTraversal(root)) {
+            System.out.println(integer);
+        }
 
     }
 }
