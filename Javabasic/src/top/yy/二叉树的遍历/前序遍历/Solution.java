@@ -8,7 +8,6 @@ package top.yy.二叉树的遍历.前序遍历;
  * @create: 2021-12-21 10:20
  **/
 
-import javax.transaction.TransactionRequiredException;
 import java.util.ArrayList;
 import java.util.List;
 
