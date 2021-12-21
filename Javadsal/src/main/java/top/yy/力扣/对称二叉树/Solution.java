@@ -1,7 +1,7 @@
-package top.yy.对称二叉树;
+package top.yy.力扣.对称二叉树;
 
 /**
- * @program: javabasic_git-top.yy.对称二叉树
+ * @program: javabasic_git-top.yy.力扣.对称二叉树
  * @description:
  * @author:
  * @create: 2021-12-20 09:46
