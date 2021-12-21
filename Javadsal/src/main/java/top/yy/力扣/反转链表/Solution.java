@@ -18,8 +18,12 @@ package top.yy.力扣.反转链表;
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-
-        
+        while (head.next != null) {
+            ListNode temp = new ListNode(0);
+            head.next = temp;
+            temp.next = head.next;
+            head.
+        }
         return null;
     }
 
