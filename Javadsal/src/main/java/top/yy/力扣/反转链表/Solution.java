@@ -44,7 +44,7 @@ class Solution {
 
 //        要将当前节点进行反转，只要知道后续的反转链表即可，然后把后续的最后一个 也就是当前的下一个指向当前 当前节点指向空即可
 //        1、因此可以写下第一段代码 反转当前的，需要先把后续的反转了 后续反转的头节点就是第一个节点
-        ListNode node = reverseList(head.next);
+        ListNode node = reverseList2(head.next);
 //        2、现在第二段的代码，后续的已经反转的情况下，将后续的最后一个指向当前 当前的指向空
         head.next.next = head;
         head.next = null;
