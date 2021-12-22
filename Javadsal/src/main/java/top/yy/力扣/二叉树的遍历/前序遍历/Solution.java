@@ -56,8 +56,8 @@ class Solution {
 //        构建二叉树
 //        root = [1,null,2,3]
 
-//        TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3, null, null), null));
-        TreeNode root = new TreeNode();
+        TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3, null, null), null));
+//        TreeNode root = new TreeNode();
 
         for (Integer integer : new Solution().preorderTraversal(root)) {
             System.out.println(integer);
