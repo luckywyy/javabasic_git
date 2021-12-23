@@ -35,7 +35,7 @@ class Solution {
         while (!queue.isEmpty()) {
 //            创建一个列表存储当前节点的值
             List<Integer> level = new ArrayList<Integer>();
-//            当前层的尺寸
+//            当前层的尺寸 因为queue是动态的添加的，所以需要这个参数控制每一层的循环数量
             int currentLevelSize = queue.size();
             for (int i = 1; i <= currentLevelSize; ++i) {
 //                扫描当前层的下一层节点，当前层扫描完一个队列就退出一个
@@ -56,6 +56,45 @@ class Solution {
         }
 
         return ret;
+    }
+
+//    解法2
+
+    public List<List<Integer>> levelOrder2(TreeNode root) {
+        List<List<Integer>> lists = new ArrayList<>();
+
+        if (root == null) {
+            return lists;
+        }
+
+        Queue<Object> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Queue<Object> queue2 = new LinkedList<>();
+            List<Integer> list = new ArrayList<>();
+
+//            和解法1 用size控制循环不同的是，用while把当前层队列的全拿出来，同时，在之前新建一个临时队列2
+//            最后当前层队列空了，就把结果填上，并且把下一层的临时队列赋值给queue，继续循环
+//            peek方法弹出队列头元素但不删除，poll方法弹出并且删除头元素，两个方法遇到队列为空时均返回null，因此用peek检查当前队列是否为空
+            while (queue.peek() != null) {
+                TreeNode temp_ = (TreeNode) queue.poll();
+                list.add(temp_.val);
+                if (temp_.left != null) {
+                    queue2.add(temp_.left);
+                }
+                if (temp_.right != null) {
+                    queue2.add(temp_.right);
+                }
+            }
+            if (queue.isEmpty()) {
+                queue = queue2;
+                lists.add(list);
+            }
+        }
+
+
+        return lists;
     }
 
     public static void main(String[] args) {
