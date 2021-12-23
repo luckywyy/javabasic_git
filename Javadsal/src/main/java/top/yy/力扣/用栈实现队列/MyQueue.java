@@ -22,6 +22,9 @@ import java.util.LinkedList;
  * @create: 2021-12-23 10:27
  **/
 class MyQueue {
+    /**
+     * Deque 双端队列
+     */
     Deque<Integer> inStack;
     Deque<Integer> outStack;
 
