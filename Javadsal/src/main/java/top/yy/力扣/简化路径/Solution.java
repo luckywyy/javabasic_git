@@ -1,6 +1,7 @@
 package top.yy.力扣.简化路径;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * @program: javabasic_git-top.yy.力扣.简化路径
@@ -42,6 +43,21 @@ public class Solution {
 //        }
 
         return null;
+    }
+    public String simplifyPath2(String path) {
+        Stack<String> stack = new Stack<>();
+        StringBuilder ret = new StringBuilder();
+        for (String p : path.split("/")) {
+            if (!stack.empty() && p.equals("..")) {
+                stack.pop();
+            } else if (!" ..".contains(p)) {
+                stack.push(p);
+            }
+        }
+        for (String i : stack) {
+            ret.append("/" + i);
+        }
+        return ret.length() == 0 ? "/" : ret.toString();
     }
 
     public static void main(String[] args) {
