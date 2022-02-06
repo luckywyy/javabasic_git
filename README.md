@@ -6,8 +6,8 @@
 
 高级编程
 
-数据结构和算法
+数据结构
 
-常用框架使用 包括Spring系列、Mybatis (Plus)、或者JWT这种Java实现的验证框架等...
+常用框架Spring系列、Mybatis (Plus)、JWT等...
 
 更新中...
